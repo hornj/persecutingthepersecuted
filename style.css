@@ -1,0 +1,161 @@
+body {
+	margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*	background-image: url("notebook_paper.jpg");
+*/
+}
+
+* {
+	font-family: 'Bitter', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+button {
+	-webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    border-radius: 5px;
+    border: 2px solid #adacad;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: initial !important;
+    -webkit-transition: background .1s ease,border .1s ease;
+    transition: background .1s ease,border .1s ease;
+    cursor: pointer;
+	outline: 0;
+    background: #ec2c22;
+    color: #fff;
+    border-color: #ec2c22;
+	text-align:center;
+}
+
+button:focus {
+    text-decoration: underline;
+    outline: 0
+}
+
+button:hover {
+    color: #fff;
+    background: #dc1d13;
+    border-color: #dc1d13
+}
+
+button:active {
+    color: #ec2c22;
+    border-color: #ec2c22;
+    background: #fff
+}
+
+#content {
+	min-height: 100%;
+	width: 100%;
+	max-width: 900px;
+    padding: 20px;
+	padding-top: 40px;
+}
+
+#header {
+	text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	
+	padding: 15px 0px;
+    margin: 10px -20px 15px 0px;
+}
+
+nav a {
+    cursor: pointer;
+	margin: 0px 20px;
+	color: black;
+    text-decoration: none;
+    font-size: 19px;
+	border-bottom: 1.5px solid rgba(0,0,0,.5);
+    padding: 3px 15px;
+	position:relative;
+}
+
+nav a:hover {
+	top:2px;
+}
+
+.section {
+	margin: 75px 0px;
+}
+
+.section h3 {
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    width: 40%;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+}
+
+#footer {
+	margin-top:30px;
+    text-align: center;
+}
+
+#footer p {
+    font-size: 12px;
+}
+
+h1 {
+    padding-bottom: 5px;
+    margin: 0px 10%;
+    font-size: 55px;
+}
+
+p, li {
+	font-size: 15px;
+	line-height: 26px;
+}
+
+blockquote {
+	font-style: normal;
+    text-align: center;
+    font-size: 14px;
+}
+
+.video {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video iframe,
+.video object,
+.video embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.change-embed-petition {
+	float:right;
+}
+
+.change-embed-petition iframe {
+	margin-left:auto;
+	margin-right:auto;
+	height: 400px; !important
+}
+
+.hide-overflow.type-s {
+    display: none !important;
+}
