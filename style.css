@@ -59,7 +59,7 @@ button:active {
 #content {
 	min-height: 100%;
 	width: 100%;
-	max-width: 900px;
+	max-width: 900px; /* 1200px for new */
     padding: 20px;
 	padding-top: 40px;
 }
@@ -115,18 +115,50 @@ nav a:hover {
   display: -webkit-flex;
   display: flex;
   
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: stretch;
+  	flex-wrap: wrap;
 }
 
 .large-videos-item {
-  padding: 5px;
-  width: 200px;
+	padding: 5px;
+	flex-basis: 375px;
+	flex-grow: 1;
+	max-width: 600px;
+}
+
+.small-videos {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+  	flex-wrap: wrap;
+}
+
+.small-videos-item {
+	padding: 5px;
+	width:200px;
+}
+
+.small-videos-item .video {
+	height:100%;
+	float:left;
 }
 
 #footer {
 	margin-top:30px;
-    text-align: center;
+	text-align: center;
 }
 
 #footer p {
@@ -151,19 +183,19 @@ blockquote {
 }
 
 .video {
-position: relative;
-padding-bottom: 56.25%;
-padding-top: 30px; height: 0; overflow: hidden;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
 }
  
 .video iframe,
 .video object,
 .video embed {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .change-embed-petition {
