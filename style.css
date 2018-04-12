@@ -206,3 +206,8 @@ blockquote {
 .hide-overflow.type-s {
     display: none !important;
 }
+
+.youtube_thumbnail {
+    width: 100%;
+    margin-top: -33px;
+}
