@@ -224,3 +224,7 @@ blockquote {
 .small-videos-item a h5 {
 	color: black;
 }
+
+.featherlight-content {
+	overflow: hidden ;
+}
