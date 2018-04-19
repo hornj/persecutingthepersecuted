@@ -20,8 +20,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 iframe {
-	width: auto ;
-	height: auto ;
+	max-width: 95% ;
+	max-height: 90% ;
 }
 
 button {
