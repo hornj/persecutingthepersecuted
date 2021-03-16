@@ -72,8 +72,12 @@
 		</div>
 	
 		<p class="video">
-			<iframe src="https://player.vimeo.com/video/212739199?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<!-- <iframe src="https://player.vimeo.com/video/212739199?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/HEy1Egad0qw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</p>
+		
+		<div class="small-videos" id="main_videos">
+		</div>		
 	
 		<!--
 		<div class="large-videos">
@@ -214,6 +218,7 @@
 		
 		globalData = data ;
 		
+		
 		var testimonials = d3.select("#testominal_videos")
 			.selectAll(".small-videos-item")
 			.data(globalData.testimonials)
@@ -231,6 +236,27 @@
 			.attr("src", function (d) { return "https://img.youtube.com/vi/" + d.youtube + "/0.jpg" ;}) ;
 		
 		testimonials.append("h5")
+			.text(function (d) { return d.name ; }) ;
+			
+			
+		
+		var mainVideos = d3.select("#main_videos")
+			.selectAll(".small-videos-item")
+			.data(globalData.mainVideos)
+		  .enter()
+			.append("div")
+				.classed("small-videos-item", true)
+			.append("a")
+				.attr("href", "#")
+				.attr("data-featherlight", function (d) { return "<iframe width='1280' height='720' src='https://www.youtube.com/embed/" + d.youtube + "?ecver=1&autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>" ;}) ;
+				
+		mainVideos.append("p")
+			.attr("class", "video")
+		  .append("img")
+			.attr("class", "youtube_thumbnail")
+			.attr("src", function (d) { return "https://img.youtube.com/vi/" + d.youtube + "/0.jpg" ;}) ;
+		
+		mainVideos.append("h5")
 			.text(function (d) { return d.name ; }) ;
 		
 		});
