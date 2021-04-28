@@ -218,8 +218,10 @@ blockquote {
 }
 
 .youtube_thumbnail {
-    width: 100%;
-    margin-top: -33px;
+    width: 170px;
+    height: 110px;
+    object-fit: cover;
+    object-position: 0px -16px;
 }
 
 .small-videos-item a h5 {
